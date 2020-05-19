@@ -1,0 +1,27 @@
+insert into library.book_info(book_id,title,primary_author,secondary_author,date_of_1st_publish,number_of_page,publisher,translator,book_topic) values(1,'Introduction to machine learning','Alpaydin','Ethem','2014-03-01',567,'The MIT Press',NULL,'1: Machine Learning, Data Science');
+
+insert into library.book_info(book_id,title,primary_author,secondary_author,date_of_1st_publish,number_of_page,publisher,translator,book_topic) values(2,'Queen: the ultimate illustrated history of the crown kings of rock','Sutcliffe','Phol','2011-01-20',367,'Voyageur Press',NULL,'2: Music,Biogrophy');
+
+insert into library.book_info(book_id,title,primary_author,secondary_author,date_of_1st_publish,number_of_page,publisher,translator,book_topic) values(3,'Harry Potter und der Feuerkelch','Rowling,J.K',NULL,'2000-05-06',776,'Carlsen','Klaus Fritz','3: Fiction');
+
+
+insert into library.people(user_id,name,phone,address,university_affiliation) values(1,'Johnny','1891579896','420 W 110th street, NYC','Columbia University');
+
+insert into library.people(user_id,name,phone,address,university_affiliation) values(2,'Jane','9172679391','97W 42nd street, NYC','New York University');
+
+insert into library.people(user_id,name,phone,address,university_affiliation) values(3,'Jim','9173809395','100W 82nd street, NYC','New York University');
+
+insert into library.people(user_id,name,phone,address,university_affiliation) values(4,'Kale','1234567890','87W 145nd street, NYC','Columbia University');
+
+insert into library.people(user_id,name,phone,address,university_affiliation) values(5,'Sarah','6759823874','56W 52nd street, NYC','New York University');
+
+
+insert into library.check_out(id,book_id,user_id,book_name,check_out_date,check_out_topic, user_name,university_affiliation) values (1,1,1,'Introduction to machine learning','2018-07-01','1: Machine Learning, Data Science','Johnny','Columbia University');
+
+insert into library.check_out(id,book_id,user_id,book_name,check_out_date,check_out_topic, user_name,university_affiliation) values (2,1,2,'Introduction to machine learning','2018-12-01','2: Machine Learning, Data Science', 'Jane','New York University');
+
+insert into library.check_out(id,book_id,user_id,book_name,check_out_date,check_out_topic, user_name,university_affiliation) values (3,2,3,' Queen: the ultimate illustrated history of the crown kings of rock','2019-01-01', '3: Music,Biogrophy', 'Jim','New York University');
+
+insert into library.check_out(id,book_id,user_id,book_name,check_out_date,check_out_topic, user_name,university_affiliation) values (4,3,4,'Harry Potter und der Feuerkelch','2018-07-01','4: Fiction','Kale','Columbia University');
+
+insert into library.check_out(id,book_id,user_id,book_name,check_out_date,check_out_topic, user_name,university_affiliation) values (5,3,5,'Harry Potter und der Feuerkelch','2018-11-01','5: Fiction','Sarah','New York University');

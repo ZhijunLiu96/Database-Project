@@ -1,0 +1,9 @@
+create keyspace library with replication = {'class':'SimpleStrategy','replication_factor':3};
+
+use library;
+
+create table library.book_info (book_id int primary key, title text, primary_author text, secondary_author text, date_of_1st_publish date, number_of_page int, publisher text, translator text, book_topic text);
+
+create table library.people (user_id int primary key, name text, phone text, address text, university_affiliation text);
+
+create table library.check_out (id int primary key, book_id int, user_id int, book_name text, check_out_date date, check_out_topic text, user_name text, university_affiliation text);

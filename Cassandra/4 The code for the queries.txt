@@ -1,0 +1,28 @@
+1.	Which books have been checked out since such and such date.
+select book_name from check_out where check_out_date>='2018-09-01' allow filtering;
+
+2.	Which users have checked out such and such book.
+select user_name from check_out where book_name='Introduction to machine learning' allow filtering;
+
+
+3.	How many books does the library have on such and such topic.
+CREATE CUSTOM INDEX ON library.book_info (book_topic) USING 'org.apache.cassandra.index.sasi.SASIIndex' WITH OPTIONS = {
+'analyzed' : 'true',
+'analyzer_class' : 'org.apache.cassandra.index.sasi.analyzer.NonTokenizingAnalyzer',
+'case_sensitive' : 'false', 
+'mode' : 'CONTAINS'
+};
+
+select count(*) from book_info where book_topic LIKE '%Fiction%' allow filtering;
+
+4.	Which users from Columbia University have checked out books on Machine Learning between this date and that date.
+
+CREATE CUSTOM INDEX ON library.check_out (check_out_topic) USING 'org.apache.cassandra.index.sasi.SASIIndex' WITH OPTIONS = {
+'analyzed' : 'true',
+'analyzer_class' : 'org.apache.cassandra.index.sasi.analyzer.NonTokenizingAnalyzer',
+'case_sensitive' : 'false', 
+'mode' : 'CONTAINS'
+};
+
+select user_name from check_out where university_affiliation='Columbia University' and check_out_topic LIKE '%Machine Learning%' and check_out_date>'2017-01-01' and check_out_date<'2019-03-01' allow filtering;
+
