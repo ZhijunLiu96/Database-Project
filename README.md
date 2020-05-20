@@ -17,7 +17,7 @@ Assume the following simplified database schema of a consumer lifestyle segmenta
 #### ER-Diagram
 Draw the ER diagram for the schema using different notation
 
-<img src="https://github.com/ZhijunLiu96/Database-Project/blob/master/Entity%20Relationship%20Diagram/ERD1.png" hight = "45%" width = "45%">
+<img src="https://github.com/ZhijunLiu96/Database-Project/blob/master/Entity%20Relationship%20Diagram/ERD1.png" hight = "60%" width = "60%">
 
 <img src="https://github.com/ZhijunLiu96/Database-Project/blob/master/Entity%20Relationship%20Diagram/ERD2.png">
 
@@ -53,11 +53,11 @@ In this assignment you will create a database for a virtual library. The books f
 
 - The library contains a collection of eBooks. Basic information about each book needs to be stored
 
->> - Title, primary author, secondary authors (if any), date of first publication, number of pages, publisher, translator (if any)
->> - For non-fiction books, a list of the key topics covered by the book needs to be stored. For works of fiction (including poems, plays, novels, collection of stories), the topic is just ‘fiction’.
+> - Title, primary author, secondary authors (if any), date of first publication, number of pages, publisher, translator (if any)
+> - For non-fiction books, a list of the key topics covered by the book needs to be stored. For works of fiction (including poems, plays, novels, collection of stories), the topic is just ‘fiction’.
 - For each book, we also need to store information about when it was checked out by which User.
 - For each User we need to store certain information
->> - User id, name, phone, address, university affiliation (if any)
+> - User id, name, phone, address, university affiliation (if any)
 
 #### Design
 - My database is designed by Cassandra, which is an open source distributed database management system and provides high availability with no single point of failure.
@@ -119,11 +119,11 @@ In this assignment you will create a database for a virtual library. The books f
 
 - The library contains a collection of eBooks. Basic information about each book needs to be stored
 
->> - Title, primary author, secondary authors (if any), date of first publication, number of pages, publisher, translator (if any)
->> - For non-fiction books, a list of the key topics covered by the book needs to be stored. For works of fiction (including poems, plays, novels, collection of stories), the topic is just ‘fiction’.
+> - Title, primary author, secondary authors (if any), date of first publication, number of pages, publisher, translator (if any)
+> - For non-fiction books, a list of the key topics covered by the book needs to be stored. For works of fiction (including poems, plays, novels, collection of stories), the topic is just ‘fiction’.
 - For each book, we also need to store information about when it was checked out by which User.
 - For each User we need to store certain information
->> - User id, name, phone, address, university affiliation (if any)
+> - User id, name, phone, address, university affiliation (if any)
 
 #### Design
 
